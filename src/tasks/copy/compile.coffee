@@ -16,8 +16,8 @@ module.exports = (coffeeProjectOptions) ->
 			log.info "Skipping copy:compile: Disabled."
 			return cb()
 
-		log.debug "[copy:compile] Source directory path: `#{sourceDirectoryPath}`."
-		log.debug "[copy:compile] Target directory path: `#{targetDirectoryPath}`."
+		log.info "[copy:compile] Source directory path: `#{sourceDirectoryPath}`."
+		log.info "[copy:compile] Target directory path: `#{targetDirectoryPath}`."
 
 		excluded   = (excluded or []).map (x) -> "!#{x}"
 		sourceGlob = [ "#{sourceDirectoryPath}/**/*" ].concat excluded
